@@ -443,7 +443,9 @@ static const CGFloat kLabelsFontSize = 12.0f;
             self.selectedMaximum = selectedValue;
         }
         else {
-            self.selectedMaximum = self.selectedMinimum;
+            if (!self.disableRange) {
+                self.selectedMaximum = self.selectedMinimum;
+            }
         }
     }
 
